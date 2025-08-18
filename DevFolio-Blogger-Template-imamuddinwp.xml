@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<!--
+
+    Name         : Devfolio
+    Version      : 1.0.0
+    Date         : August 03, 2025
+    Demo         : https://devfolio-imamuddinwp.blogspot.com/
+    Type         : Open Source (Free)
+    Developed by : Meraz Alvee
+    Contribute   : https://github.com/imamuddinwp/Blogger-Templates-For-Portfolio
+
+    ============================================================================
+    NOTE :
+    This theme is premium (paid).
+    You can only get it by purchasing officially.
+    If you get it for free through any method, that means you get it illegally.
+    ============================================================================
+
+-->
+    <meta charset='UTF-8'/>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <title>DevFolio Blogger Template - imamuddinwp</title>
+    <meta content='The official links, portfolio, experience, and projects for Imam Uddin, imamuddinwp. Connect with Meraz on all platforms.' name='description'/>
+    <meta content='index, follow' name='robots'/>
+    <link href='https://imamuddinwpbd.blogspot.com/' rel='canonical'/>
+    <meta content='Imam Uddin - Portfolio Website' property='og:title'/>
+    <meta content='Connect with Imam Uddin, imamuddinwp. Explore portfolio, projects, and professional experience.' property='og:description'/>
+    <meta content='https://openmeraz.pages.dev/profile.jpg' property='og:image'/>
+    <meta content='https://imamuddinwpbd.blogspot.com/' property='og:url'/>
+    <meta content='website' property='og:type'/>
+    <meta content='summary_large_image' name='twitter:card'/>
+    <meta content='Imam Uddin, imamuddinwp - Official Site' name='twitter:title'/>
+    <meta content='Connect with Meraz on all platforms.' name='twitter:description'/>
+    <meta content='https://openmeraz.pages.dev/profile.jpg' name='twitter:image'/>
+    <script src='https://cdn.tailwindcss.com'/>
+    <script src='https://cdnix.pages.dev/firebase.js'/>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css' rel='stylesheet'/>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap' rel='stylesheet'/>
+    <script src='https://cdnix.pages.dev/devfolio.js'/>
+    <script id='schema-data' type='application/ld+json'>
+    {
+      &quot;@context&quot;: &quot;https://schema.org&quot;,
+      &quot;@type&quot;: &quot;Person&quot;,
+      &quot;name&quot;: &quot;Imam Uddin, imamuddinwp&quot;,
+      &quot;url&quot;: &quot;https://imamuddinwpbd.blogspot.com/&quot;,
+      &quot;image&quot;: &quot;https://static.wixstatic.com/media/10490a_a4aa076187214e41a20012e4a0458c16~mv2.jpg/v1/crop/x_0,y_47,w_745,h_745/fill/w_426,h_426,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/imam-uddin-freecodecamp.jpg&quot;,
+      &quot;jobTitle&quot;: &quot;Web Developer &amp; Founder&quot;,
+      &quot;worksFor&quot;: {
+        &quot;@type&quot;: &quot;Organization&quot;,
+        &quot;name&quot;: &quot;Blogger Theme and Tools&quot;
+      },
+      &quot;nationality&quot;: &quot;Bangladeshi&quot;,
+      &quot;homeLocation&quot;: {
+        &quot;@type&quot;: &quot;Country&quot;,
+        &quot;name&quot;: &quot;Bangladesh&quot;
+      },
+      &quot;sameAs&quot;: []
+    }
+  </script>
+
+    <b:skin><![CDATA[
+      :root {
+        --bottom-nav-height: 55px;
+        --ui-bg-base: #f9fafb;
+        --ui-bg-component: #ffffff;
+        --ui-border-base: #e5e7eb;
+        --ui-fg-base: #111827;
+        --ui-fg-muted: #6b7280;
+        --ui-fg-interactive: #0066ff;
+      }
+      body {
+        display: none;
+        font-family: 'Inter', sans-serif;
+        background-color: var(--ui-bg-base);
+        color: var(--ui-fg-base);
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      ::-webkit-scrollbar { width: 0px; }
+      @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+      .animate-card { animation: fadeInUp 0.5s ease-out forwards; animation-delay: var(--animation-delay, 0s); opacity: 0; }
+      .search-highlight { background-color: rgba(0, 102, 255, 0.2); border-radius: 2px; }
+      #nav-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: var(--ui-bg-component);
+        border-top: 1px solid var(--ui-border-base);
+      }
+      .nav-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        height: 100%;
+        color: var(--ui-fg-muted);
+        transition: color 0.2s ease-in-out;
+        font-weight: 500;
+      }
+      .nav-link.active {
+        color: var(--ui-fg-interactive);
+        font-weight: 600;
+      }
+      .nav-link i {
+        font-size: 1.3rem;
+        margin-bottom: 2px;
+      }
+      .nav-link span {
+        font-size: 0.6rem;
+      }
+      @media (min-width: 1024px) {
+        #nav-container {
+            border: 1px solid var(--ui-border-base);
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+      }
+    ]]></b:skin>
+</head>
+<body class='w-full'>
+  <b:section id='main'/>
+    <div class='fixed inset-0 flex flex-col items-center justify-center bg-white z-50 transition-opacity duration-300' id='loader' style='display: none; opacity: 0;'>
+        <div class='h-10 w-10 animate-spin rounded-full border-2 border-blue-500 border-t-transparent' role='status'/>
+        <p class='mt-4 text-sm text-[color:var(--ui-fg-muted)]' id='loader-text'/>
+    </div>
+
+    <nav class='fixed left-0 right-0 z-40 mx-auto bottom-0 h-[var(--bottom-nav-height)] lg:bottom-6 lg:max-w-md' id='floating-nav'>
+        <div id='nav-container'>
+        </div>
+    </nav>
+
+    <main class='w-full pb-[calc(var(--bottom-nav-height)+1rem)] lg:pb-8' id='pageContent'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
+        <div class='flex flex-col items-center mb-12'>
+            <a href='/'><img alt='Profile of Imam Uddin, imamuddinwp' class='h-24 w-24 rounded-full shadow-lg border-4 border-white' src='https://static.wixstatic.com/media/10490a_a4aa076187214e41a20012e4a0458c16~mv2.jpg/v1/crop/x_0,y_47,w_745,h_745/fill/w_426,h_426,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/imam-uddin-freecodecamp.jpg'/></a>
+            <a href='/'><h1 class='text-2xl sm:text-3xl font-bold mt-4 text-center'>Imam Uddin, imamuddinwp</h1></a>
+            <p class='text-[color:var(--ui-fg-muted)] mt-1 text-center'>SEO Expert | Web Designer @ <b> <a href='https://nextgendigitalhub.blogspot.com' target='_blank'>NextGen Digital</a></b>.</p>
+        </div>
+
+        <div id='contentContainer'>
+            <div class='content-section' id='linksSection'/>
+            <div class='content-section hidden' id='portfolioSection'/>
+            <div class='content-section hidden' id='experienceSection'/>
+            <div class='content-section hidden' id='projectsSection'/>
+            <div class='content-section hidden' id='contactSection'/>
+        </div>
+      </div>
+    </main>
+    <div class='hidden' id='errorContainer'/>
+
+    <script>/*<![CDATA[*/
+    const config = {
+      telegram: {
+        botToken: 'YOUR_BOT_TOKEN',
+        chatId: 'YOUR_CHAT_ID'
+      },
+      links: [
+        { platform: 'Facebook',         url: 'https://facebook.com/imamuddinwpbd',                 category: 'social'       },        
+        { platform: 'LinkedIn',         url: 'https://linkedin.com/in/imamuddinwp',                category: 'professional' },
+        { platform: 'GitHub',           url: 'https://github.com/imamuddinwp',                     category: 'development'  },
+        { platform: 'Telegram',         url: 'https://t.me/imamuddinwp',                           category: 'social'       },        
+        { platform: 'Behance',          url: 'https://behance.net/imamuddinwp',                    category: 'design'       },        
+        { platform: 'Medium',           url: 'https://medium.com/@imamuddinwp',                    category: 'writing'      },
+        { platform: 'Carrd',            url: 'https://imamuddinwp.carrd.co',                       category: 'links'        },
+        { platform: 'About.me',         url: 'https://about.me/imamuddinwp',                       category: 'links'        },
+        { platform: 'Dev.to',           url: 'https://dev.to/imamuddinwp',                         category: 'development'  },
+        { platform: 'Linktree',         url: 'https://linktr.ee/imamuddinwp',                      category: 'links'        },
+        { platform: 'Pinterest',        url: 'https://pinterest.com/imamuddinwp',                  category: 'social'       },
+        { platform: 'CodePen',          url: 'https://codepen.io/imamuddinwp',                     category: 'development'  },        
+        { platform: 'Stack Overflow',   url: 'https://stackoverflow.com/users/4794817/imamuddinwp',category: 'development'  },
+        { platform: 'GitLab',           url: 'https://gitlab.com/imamuddinwp',                     category: 'development'  },
+        { platform: 'Twitter',          url: 'https://twitter.com/imamuddinwp',                    category: 'social'       },
+        { platform: 'Instagram',        url: 'https://instagram.com/imamuddinwp',                  category: 'social'       },
+        { platform: 'TikTok',           url: 'https://tiktok.com/@imamuddinwp',                    category: 'social'       },
+        { platform: 'YouTube',          url: 'https://youtube.com/@imamuddinwp',                   category: 'social'       },
+        { platform: 'Snapchat',         url: 'https://snapchat.com/add/imamuddinwp',               category: 'social'       },
+        { platform: 'Discord',          url: 'https://discord.gg/YOUR_SERVER_INVITE_CODE',         category: 'social'       },
+        { platform: 'Reddit',           url: 'https://www.reddit.com/user/imamuddinwp',            category: 'social'       },
+        { platform: 'Hashnode',         url: 'https://hashnode.com/@imamuddinwp',                  category: 'writing'      },
+        { platform: 'Bitbucket',        url: 'https://bitbucket.org/imamuddinwp',                  category: 'development'  },
+        { platform: 'Fiverr',           url: 'https://fiverr.com/imamuddinwp',                     category: 'professional' },
+        { platform: 'Upwork',           url: 'https://www.upwork.com/freelancers/~imamuddinwp',    category: 'professional' },
+        { platform: 'Freelancer',       url: 'https://www.freelancer.com/u/imamuddinwp',           category: 'professional' },
+        { platform: 'Dribbble',         url: 'https://dribbble.com/imamuddinwp',                   category: 'design'       },
+        { platform: 'Figma',            url: 'https://figma.com/@imamuddinwp',                     category: 'design'       },
+        { platform: 'Gumroad',          url: 'https://gumroad.com/imamuddinwp',                    category: 'ecommerce'    },
+        { platform: 'Buy Me a Coffee',  url: 'https://buymeacoffee.com/imamuddinwp',               category: 'support'      },
+        { platform: 'Ko-fi',            url: 'https://ko-fi.com/imamuddinwp',                      category: 'support'      },
+        { platform: 'PayPal',           url: 'https://paypal.me/imamuddinwp',                      category: 'support'      },
+        { platform: 'Patreon',          url: 'https://patreon.com/imamuddinwp',                    category: 'support'      },
+        { platform: 'Substack',         url: 'https://imamuddinwp.substack.com',                   category: 'writing'      },
+        { platform: 'Spotify',          url: 'https://open.spotify.com/user/imamuddinwp',          category: 'music'        },
+        { platform: 'SoundCloud',       url: 'https://soundcloud.com/imamuddinwp',                 category: 'music'        },
+        { platform: 'Apple Music',      url: 'https://music.apple.com/profile/imamuddinwp',        category: 'music'        },
+        { platform: 'Bandcamp',         url: 'https://imamuddinwp.bandcamp.com',                   category: 'music'        },
+        { platform: 'Notion',           url: 'https://imamuddinwp.notion.site',                    category: 'productivity' },
+        { platform: 'Canva',            url: 'https://canva.com/imamuddinwp',                      category: 'design'       },
+        { platform: 'Product Hunt',     url: 'https://www.producthunt.com/@imamuddinwp',           category: 'development'  },
+        { platform: 'itch.io',          url: 'https://imamuddinwp.itch.io',                        category: 'gaming'       },
+        { platform: 'CodeSandbox',      url: 'https://codesandbox.io/u/imamuddinwp',               category: 'development'  },
+        { platform: 'Replit',           url: 'https://replit.com/@imamuddinwp',                    category: 'development'  },
+        { platform: 'npm',              url: 'https://npmjs.com/~imamuddinwp',                     category: 'development'  },
+        { platform: 'Snapcraft',        url: 'https://snapcraft.io/user/imamuddinwp',              category: 'development'  },
+        { platform: 'Docker Hub',       url: 'https://hub.docker.com/u/imamuddinwp',               category: 'development'  },
+        { platform: 'Chrome Web Store', url: 'https://chrome.google.com/webstore/detail/ID',       category: 'development'  },
+        { platform: 'Etherscan',        url: 'https://etherscan.io/address/YOUR_WALLET',           category: 'crypto'       },
+        { platform: 'BscScan',          url: 'https://bscscan.com/address/YOUR_WALLET',            category: 'crypto'       },
+        { platform: 'OpenSea',          url: 'https://opensea.io/imamuddinwp',                     category: 'crypto'       },
+        { platform: 'Lens',             url: 'https://lenster.xyz/u/imamuddinwp',                  category: 'social'       },
+        { platform: 'Website',          url: 'https://imamuddinwpbd.blogspot.com',                 category: 'official'     },
+        { platform: 'Blog',             url: 'https://themes.imamuddinwpbd.blogspot.com',          category: 'writing'      },
+        { platform: 'Portfolio',        url: 'https://imamuddinwp.myportfolio.com',                category: 'professional' },
+        { platform: 'CV/Resume',        url: 'https://imamuddinwpbd.blogspot.com/cv.pdf',          category: 'professional' }
+      ],
+      portfolio: [
+        { image: 'https://4kwallpapers.com/images/walls/thumbs_2t/8710.jpg', title: 'Creative Design Agency', description: 'A visually-driven website for a design agency, focusing on animations and portfolio showcase.', liveUrl: '#', detailsUrl: '#' },
+        { image: 'https://4kwallpapers.com/images/walls/thumbs_2t/8710.jpg', title: 'SaaS Platform Dashboard', description: 'A complex data visualization dashboard for a software-as-a-service product.', liveUrl: '#', detailsUrl: '#' },
+        { image: 'https://4kwallpapers.com/images/walls/thumbs_2t/8710.jpg', title: 'Restaurant Booking Site', description: 'An elegant website for a high-end restaurant with a custom booking and menu system.', liveUrl: '#', detailsUrl: '#' },
+        { image: 'https://4kwallpapers.com/images/walls/thumbs_2t/8710.jpg', title: 'Non-Profit Organization Hub', description: 'A community and informational hub for a non-profit, focusing on accessibility and storytelling.', liveUrl: '#', detailsUrl: '#' },
+        { image: 'https://4kwallpapers.com/images/walls/thumbs_2t/8710.jpg', title: 'Real Estate Listings Portal', description: 'A feature-rich portal for Browse and filtering real estate properties with map integration.', liveUrl: '#', detailsUrl: '#' },
+        { image: 'https://4kwallpapers.com/images/walls/thumbs_2t/8710.jpg', title: 'Personal Finance Tracker', description: 'A mobile-first web app to help users track their income and expenses.', liveUrl: '#', detailsUrl: '#' }
+      ],
+      experience: [
+        { date: 'Aug 2022 - Present', title: 'Founder & Lead Developer', company: 'Blogger Theme and Tools', icon: 'bi-rocket-takeoff-fill', duties: ['Developed and maintained high-quality themes for the Blogger platform.', 'Created tools to help bloggers optimize their sites.', 'Managed project lifecycle from concept to deployment.'] },
+        { date: 'Jun 2020 - Jul 2022', title: 'Freelance Web Developer', company: 'Upwork & Fiverr', icon: 'bi-code-slash', duties: ['Delivered custom web solutions for clients worldwide.', 'Specialized in front-end development using HTML, CSS, and JavaScript.'] }
+      ],
+      projects: [
+        { title: 'Link Page Generator', description: 'This very page! A fully dynamic, client-side rendered links page built with vanilla JS and Tailwind CSS for maximum performance and customization.', sourceUrl: 'https://github.com/imamuddinwp', liveUrl: '#', tags: [{ name: 'JavaScript', icon: 'bi-braces' }, { name: 'TailwindCSS', icon: 'bi-wind' }, { name: 'HTML5', icon: 'bi-filetype-html' }] },
+        { title: 'Blogger SEO Tool', description: 'An online utility to analyze and improve the SEO of Blogger websites, featuring real-time scoring and actionable recommendations.', sourceUrl: 'https://github.com/imamuddinwp', liveUrl: '#', tags: [{ name: 'Next.js', icon: 'bi-file-code' }, { name: 'Node.js', icon: 'bi-hdd-stack' }, { name: 'API', icon: 'bi-plugin' }] },
+        { title: 'React Component Library', description: 'A set of reusable and accessible UI components built with React and Storybook for streamlined development.', sourceUrl: '#', liveUrl: '#', tags: [{ name: 'React', icon: 'bi-gem' }, { name: 'Storybook', icon: 'bi-book' }, { name: 'CSS-in-JS', icon: 'bi-palette' }] },
+        { title: 'Python Data Scraper', description: 'A backend script to scrape, clean, and store data from various web sources into a structured database.', sourceUrl: '#', liveUrl: '#', tags: [{ name: 'Python', icon: 'bi-filetype-py' }, { name: 'BeautifulSoup', icon: 'bi-tree' }, { name: 'SQL', icon: 'bi-server' }] },
+        { title: 'Vue.js Weather App', description: 'A clean and simple weather application that provides real-time weather data based on user location, built with Vue.js.', sourceUrl: '#', liveUrl: '#', tags: [{ name: 'Vue.js', icon: 'bi-lightbulb' }, { name: 'REST API', icon: 'bi-cloud-download' }] },
+        { title: 'Figma Design System', description: 'A comprehensive design system created in Figma to ensure brand consistency and accelerate product design and development.', sourceUrl: '#', liveUrl: '#', tags: [{ name: 'Figma', icon: 'bi-figma' }, { name: 'UI/UX Design', icon: 'bi-easel2' }] }
+      ],
+      navigation: [
+        { id: 'linksSection',      name: 'Links',      icon: 'bi-house',          activeIcon: 'bi-house-fill'       },
+        { id: 'portfolioSection',  name: 'Portfolio',  icon: 'bi-collection',     activeIcon: 'bi-collection-fill'  },
+        { id: 'projectsSection',   name: 'Projects',   icon: 'bi-folder2-open',   activeIcon: 'bi-folder2-open'     },
+        { id: 'experienceSection', name: 'Experience', icon: 'bi-briefcase',      activeIcon: 'bi-briefcase-fill'   },
+        { id: 'contactSection',    name: 'Contact',    icon: 'bi-envelope',       activeIcon: 'bi-envelope-fill'    }
+      ],
+      iconMap: { 'facebook': 'bi-facebook', 'twitter': 'bi-twitter-x', 'instagram': 'bi-instagram', 'tiktok': 'bi-tiktok', 'youtube': 'bi-youtube', 'linkedin': 'bi-linkedin', 'github': 'bi-github', 'telegram': 'bi-telegram', 'pinterest': 'bi-pinterest', 'snapchat': 'bi-snapchat', 'discord': 'bi-discord', 'reddit': 'bi-reddit', 'medium': 'bi-medium', 'devto': 'bi-link-45deg', 'hashnode': 'bi-hash', 'stackoverflow': 'bi-stack-overflow', 'gitlab': 'bi-gitlab', 'bitbucket': 'bi-link-45deg', 'fiverr': 'bi-person-workspace', 'upwork': 'bi-person-badge', 'freelancer': 'bi-briefcase', 'dribbble': 'bi-dribbble', 'behance': 'bi-behance', 'figma': 'bi-link-45deg', 'gumroad': 'bi-cart4', 'buymeacoffee': 'bi-cup-hot-fill', 'kofi': 'bi-cup-hot', 'paypal': 'bi-paypal', 'patreon': 'bi-link-45deg', 'substack': 'bi-substack', 'spotify': 'bi-spotify', 'soundcloud': 'bi-link-45deg', 'applemusic': 'bi-music-note', 'bandcamp': 'bi-link-45deg', 'notion': 'bi-journal-richtext', 'canva': 'bi-palette-fill', 'producthunt': 'bi-box-seam', 'itchio': 'bi-joystick', 'codepen': 'bi-link-45deg', 'codesandbox': 'bi-box', 'replit': 'bi-terminal-fill', 'npm': 'bi-link-45deg', 'snapcraft': 'bi-ubuntu', 'dockerhub': 'bi-link-45deg', 'chromewebstore': 'bi-browser-chrome', 'etherscan': 'bi-gem', 'bscscan': 'bi-currency-bitcoin', 'opensea': 'bi-water', 'lens': 'bi-flower1', 'linktree': 'bi-tree-fill', 'carrd': 'bi-card-list', 'aboutme': 'bi-person-vcard-fill', 'website': 'bi-globe2', 'blog': 'bi-blockquote-left', 'portfolio': 'bi-collection-fill', 'cvresume': 'bi-file-earmark-person-fill', 'default': 'bi-link-45deg' },
+      categoryNames: { 'social': 'Social Media', 'professional': 'Professional', 'development': 'Development', 'writing': 'Writing', 'design': 'Design', 'support': 'Support Me', 'music': 'Music', 'productivity': 'Productivity', 'gaming': 'Gaming', 'crypto': 'Crypto', 'links': 'Link Aggregators', 'official': 'Official', 'ecommerce': 'E-Commerce' }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const ui = {
+        loader: document.getElementById('loader'),
+        navContainer: document.getElementById('nav-container'),
+        contentSections: document.querySelectorAll('.content-section'),
+        linksSection: document.getElementById('linksSection'),
+        portfolioSection: document.getElementById('portfolioSection'),
+        experienceSection: document.getElementById('experienceSection'),
+        projectsSection: document.getElementById('projectsSection'),
+        contactSection: document.getElementById('contactSection'),
+      };
+      
+      const state = { 
+        activeSection: 'linksSection', 
+        searchQuery: '', 
+        activeCategory: 'all', 
+      };
+
+      const init = () => {
+        if (handleRedirect()) return;
+        updateSchema(config.links);
+        renderAllContent();
+        setupNavigation();
+        showSection(state.activeSection, true);
+      };
+      
+      const renderAllContent = () => {
+        renderLinksSection();
+        renderPortfolioSection();
+        renderExperienceSection();
+        renderProjectsSection();
+        renderContactSection();
+      };
+
+      const renderLinksSection = () => {
+        ui.linksSection.innerHTML = `<div class="flex flex-col items-center mb-8 animate-card"><div class="relative w-full max-w-md"><div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"><i class="bi bi-search text-gray-400"></i></div><input id="searchInput" type="text" class="block w-full pl-10 pr-10 py-2 border border-[color:var(--ui-border-base)] rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Search links..."><div id="searchClear" class="absolute inset-y-0 right-0 pr-3 flex items-center hidden"><i class="bi bi-x-lg text-gray-400 hover:text-gray-600"></i></div></div><div id="categoryFilter" class="flex flex-wrap justify-center gap-2 mt-4 w-full max-w-2xl"></div></div><div id="linksGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4"></div><div id="noResults" class="hidden text-center py-10"><i class="bi bi-emoji-frown text-4xl text-gray-400 mb-4"></i><h3 class="text-xl font-medium text-gray-600">No links found</h3><p class="text-gray-500 mt-2">Try a different search term or category</p></div>`;
+        setupSearch();
+        displayCategories();
+        displayLinks(config.links);
+      };
+
+      const renderPortfolioSection = () => {
+        ui.portfolioSection.innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>`;
+        const grid = ui.portfolioSection.firstChild;
+        config.portfolio.forEach((item, index) => {
+            const card = document.createElement('div');
+            card.className = 'animate-card bg-white border border-[color:var(--ui-border-base)] rounded-lg shadow-sm overflow-hidden transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5';
+            card.style.setProperty('--animation-delay', `${index * 100}ms`);
+            card.innerHTML = `<img src="${item.image}" alt="${item.title}" class="w-full h-48 object-cover"><div class="p-5"><h3 class="text-lg font-semibold text-[color:var(--ui-fg-base)]">${item.title}</h3><p class="text-sm text-[color:var(--ui-fg-muted)] mt-1">${item.description}</p><div class="mt-4 flex space-x-4"><a href="${item.liveUrl}" target="_blank" class="text-sm font-medium text-[color:var(--ui-fg-interactive)] hover:underline">Live Demo <i class="bi bi-arrow-up-right ml-1"></i></a><a href="${item.detailsUrl}" target="_blank" class="text-sm font-medium text-[color:var(--ui-fg-interactive)] hover:underline">Details</a></div></div>`;
+            grid.appendChild(card);
+        });
+      };
+      
+      const renderExperienceSection = () => {
+        ui.experienceSection.innerHTML = `<div class="max-w-3xl mx-auto"><div class="space-y-8"></div></div>`;
+        const wrapper = ui.experienceSection.querySelector('.space-y-8');
+        config.experience.forEach((item, index) => {
+            const dutiesHtml = item.duties.map(duty => `<li>${duty}</li>`).join('');
+            const element = document.createElement('div');
+            element.className = 'animate-card flex';
+            element.style.setProperty('--animation-delay', `${index * 100}ms`);
+            element.innerHTML = `<div class="flex flex-col items-center mr-4"><div><div class="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-full text-[color:var(--ui-fg-interactive)] text-xl"><i class="bi ${item.icon}"></i></div></div><div class="w-px h-full bg-[color:var(--ui-border-base)]"></div></div><div class="pb-8"><p class="mb-1 text-sm text-[color:var(--ui-fg-muted)]">${item.date}</p><h3 class="font-semibold text-[color:var(--ui-fg-base)]">${item.title}</h3><p class="text-sm text-[color:var(--ui-fg-subtle)]">${item.company}</p><ul class="mt-2 ml-4 list-disc text-sm text-[color:var(--ui-fg-muted)] space-y-1">${dutiesHtml}</ul></div>`;
+            wrapper.appendChild(element);
+        });
+      };
+      
+      const renderProjectsSection = () => {
+        ui.projectsSection.innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>`;
+        const grid = ui.projectsSection.firstChild;
+        config.projects.forEach((item, index) => {
+            const tagsHtml = item.tags.map(tag => `<span class="flex items-center text-xs font-medium bg-gray-100 text-gray-700 px-2.5 py-1 rounded-full"><i class="bi ${tag.icon} mr-1.5"></i> ${tag.name}</span>`).join('');
+            const card = document.createElement('div');
+            card.className = 'animate-card bg-white border border-[color:var(--ui-border-base)] rounded-lg shadow-sm p-5 flex flex-col transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5';
+            card.style.setProperty('--animation-delay', `${index * 100}ms`);
+            card.innerHTML = `<h3 class="text-lg font-semibold text-[color:var(--ui-fg-base)]">${item.title}</h3><p class="text-sm text-[color:var(--ui-fg-muted)] mt-1 flex-grow">${item.description}</p><div class="mt-4 flex flex-wrap gap-2">${tagsHtml}</div><div class="mt-4 pt-4 border-t border-[color:var(--ui-border-base)] flex space-x-4"><a href="${item.sourceUrl}" target="_blank" class="text-sm font-medium text-[color:var(--ui-fg-interactive)] hover:underline inline-flex items-center"><i class="bi bi-github mr-1.5"></i>View Source</a><a href="${item.liveUrl}" target="_blank" class="text-sm font-medium text-[color:var(--ui-fg-interactive)] hover:underline inline-flex items-center"><i class="bi bi-arrow-up-right mr-1.5"></i>Live Demo</a></div>`;
+            grid.appendChild(card);
+        });
+      };
+      
+      const renderContactSection = () => {
+        ui.contactSection.innerHTML = `<div class="animate-card max-w-2xl mx-auto bg-white border border-[color:var(--ui-border-base)] rounded-lg shadow-sm p-6 sm:p-8"><h2 class="text-xl font-semibold text-center text-[color:var(--ui-fg-base)]">Get In Touch</h2><p class="text-sm text-[color:var(--ui-fg-muted)] text-center mt-2">Have a question or want to work together? Send me a message!</p><form id="contactForm" class="mt-6 space-y-4"><div><label for="name" class="block text-sm font-medium text-[color:var(--ui-fg-subtle)]">Name</label><input type="text" id="name" name="name" class="mt-1 block w-full px-3 py-2 bg-white border border-[color:var(--ui-border-base)] rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required></div><div><label for="email" class="block text-sm font-medium text-[color:var(--ui-fg-subtle)]">Email</label><input type="email" id="email" name="email" class="mt-1 block w-full px-3 py-2 bg-white border border-[color:var(--ui-border-base)] rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required></div><div><label for="message" class="block text-sm font-medium text-[color:var(--ui-fg-subtle)]">Message</label><textarea id="message" name="message" rows="4" class="mt-1 block w-full px-3 py-2 bg-white border border-[color:var(--ui-border-base)] rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required></textarea></div><div><button type="submit" id="submitBtn" class="w-full inline-flex justify-center py-2.5 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[color:var(--ui-fg-interactive)] hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">Send Message</button></div><p id="formStatus" class="text-center text-sm mt-2"></p></form></div>`;
+        document.getElementById('contactForm').addEventListener('submit', handleContactSubmit);
+      };
+      
+      const handleContactSubmit = async (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const submitBtn = form.querySelector('#submitBtn');
+        const formStatus = form.querySelector('#formStatus');
+        const { name, email, message } = form.elements;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        formStatus.textContent = '';
+        const text = `New Message from Portfolio\n\n*Name:* ${name.value}\n*Email:* ${email.value}\n\n*Message:*\n${message.value}`;
+        const url = `https://api.telegram.org/bot${config.telegram.botToken}/sendMessage`;
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ chat_id: config.telegram.chatId, text, parse_mode: 'Markdown' }),
+            });
+            const data = await response.json();
+            if (data.ok) {
+                formStatus.textContent = 'Message sent successfully!';
+                formStatus.style.color = 'green';
+                form.reset();
+            } else { throw new Error(data.description); }
+        } catch (error) {
+            formStatus.textContent = 'Failed to send message. Please try again later.';
+            formStatus.style.color = 'red';
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+        }
+      };
+
+      const displayLinks = (links) => {
+        const linksGrid = document.getElementById('linksGrid');
+        const noResults = document.getElementById('noResults');
+        linksGrid.innerHTML = '';
+        noResults.classList.toggle('hidden', links.length > 0);
+        links.forEach((link, index) => {
+            const key = link.platform.toLowerCase().replace(/[^a-z0-9]/g, '');
+            const iconName = config.iconMap[key] || config.iconMap['default'];
+            const linkElement = document.createElement('a');
+            linkElement.href = link.url;
+            linkElement.target = '_blank';
+            linkElement.rel = 'noopener noreferrer';
+            linkElement.className = 'group animate-card flex items-center justify-between p-4 bg-white border border-[color:var(--ui-border-base)] rounded-lg shadow-sm hover:shadow-md hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 ease-in-out';
+            linkElement.style.setProperty('--animation-delay', `${index * 30}ms`);
+            const highlightedName = state.searchQuery ? link.platform.replace(new RegExp(`(${state.searchQuery.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')})`, 'gi'), '<span class="search-highlight">$1</span>') : link.platform;
+            linkElement.innerHTML = `<div class="flex items-center"><i class="bi ${iconName} text-xl text-[color:var(--ui-fg-muted)] transition-colors group-hover:text-[color:var(--ui-fg-interactive)]"></i><span class="ml-4 font-medium text-[color:var(--ui-fg-subtle)] transition-colors group-hover:text-[color:var(--ui-fg-base)]">${highlightedName}</span></div><i class="bi bi-arrow-up-right text-lg text-gray-400 group-hover:text-[color:var(--ui-fg-interactive)] transition-colors"></i>`;
+            linksGrid.appendChild(linkElement);
+        });
+      };
+
+      const displayCategories = () => {
+        const categoryFilter = document.getElementById('categoryFilter');
+        const categories = ['all', ...new Set(config.links.map(link => link.category))];
+        categoryFilter.innerHTML = '';
+        categories.forEach(category => {
+            const button = document.createElement('button');
+            button.className = `px-3 py-1 rounded-full text-sm font-medium transition-colors ${state.activeCategory === category ? 'bg-blue-100 text-blue-800' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`;
+            button.textContent = category === 'all' ? 'All' : config.categoryNames[category] || category;
+            button.addEventListener('click', () => {
+                state.activeCategory = category;
+                displayCategories();
+                displayLinks(filterLinks());
+            });
+            categoryFilter.appendChild(button);
+        });
+      };
+
+      const filterLinks = () => config.links.filter(link => (state.activeCategory === 'all' || link.category === state.activeCategory) && (!state.searchQuery || link.platform.toLowerCase().includes(state.searchQuery.toLowerCase())));
+      
+      const setupSearch = () => {
+        const searchInput = document.getElementById('searchInput');
+        const searchClear = document.getElementById('searchClear');
+        searchInput.addEventListener('input', (e) => {
+            state.searchQuery = e.target.value.trim();
+            searchClear.classList.toggle('hidden', !state.searchQuery);
+            displayLinks(filterLinks());
+        });
+        searchClear.addEventListener('click', () => {
+            searchInput.value = '';
+            state.searchQuery = '';
+            searchClear.classList.add('hidden');
+            displayLinks(filterLinks());
+        });
+      };
+
+      const setupNavigation = () => {
+        config.navigation.forEach(item => {
+          const link = document.createElement('button');
+          link.className = 'nav-link';
+          link.dataset.target = item.id;
+          link.innerHTML = `<i class="bi ${item.icon}"></i><span class="pb-[3px]">${item.name}</span>`;
+          ui.navContainer.appendChild(link);
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+          link.addEventListener('click', () => showSection(link.dataset.target));
+        });
+      };
+      
+      const showSection = (targetId, isInitialLoad = false) => {
+          state.activeSection = targetId;
+          ui.contentSections.forEach(section => section.classList.toggle('hidden', section.id !== targetId));
+          
+          document.querySelectorAll('.nav-link').forEach(link => {
+              const isActive = link.dataset.target === targetId;
+              const navItemData = config.navigation.find(nav => nav.id === link.dataset.target);
+              link.classList.toggle('active', isActive);
+              link.querySelector('i').className = `bi ${isActive ? navItemData.activeIcon : navItemData.icon}`;
+          });
+
+          if (!isInitialLoad) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+      };
+      
+      const handleRedirect = () => {
+        const slug = window.location.pathname.split('/').filter(Boolean)[0];
+        if (!slug) return false;
+        const redirectLink = config.links.find(link => link.platform.toLowerCase().replace(/[^a-z0-9]/g, '') === slug.toLowerCase().replace(/[^a-z0-9]/g, ''));
+        if (redirectLink) {
+            ui.loader.style.display = 'flex'; ui.loader.style.opacity = '1';
+            ui.loader.querySelector('p').textContent = `Redirecting to ${new URL(redirectLink.url).hostname}...`;
+            setTimeout(() => { window.location.replace(redirectLink.url); }, 100);
+            return true;
+        }
+        return false;
+      };
+
+      const updateSchema = (links) => {
+        const schemaScript = document.getElementById('schema-data');
+        const schema = JSON.parse(schemaScript.textContent);
+        schema.sameAs = links.map(link => link.url);
+        schemaScript.textContent = JSON.stringify(schema, null, 2);
+      };
+      
+      init();
+    });
+    /*]]>*/</script>
+</body>
+</html>
