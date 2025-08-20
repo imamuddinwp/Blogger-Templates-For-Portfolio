@@ -6,7 +6,7 @@
 
     Name         : Devfolio
     Version      : 1.0.0
-    Date         : August 03, 2025
+    Date         : August 21, 2025
     Demo         : https://devfolio-imamuddinwp.blogspot.com/
     Type         : Open Source (Free)
     Developed by : Meraz Alvee
@@ -175,7 +175,7 @@
         { platform: 'Pinterest',        url: 'https://pinterest.com/imamuddinwp',                  category: 'social'       },
         { platform: 'CodePen',          url: 'https://codepen.io/imamuddinwp',                     category: 'development'  },        
         { platform: 'Stack Overflow',   url: 'https://stackoverflow.com/users/4794817/imamuddinwp',category: 'development'  },
-        { platform: 'GitLab',           url: 'https://gitlab.com/imamuddinwp',                     category: 'development'  },
+        { platform: 'GitLab',           url: 'https://gitlab.com/imamuddinwp',                     category: 'development'  }, 
         { platform: 'Twitter',          url: 'https://x.com/imamuddinweb',                         category: 'social'       },
         { platform: 'Instagram',        url: 'https://instagram.com/imamuddinwp',                  category: 'social'       },
         { platform: 'TikTok',           url: 'https://imamuddinwp.wixsite.com/imamuddinwp',        category: 'social'       },
@@ -215,7 +215,7 @@
         { platform: 'OpenSea',          url: 'https://opensea.io/imamuddinwp',                     category: 'crypto'       },
         { platform: 'Lens',             url: 'https://lenster.xyz/u/imamuddinwp',                  category: 'social'       },
         { platform: 'Website',          url: 'https://imamuddinwpbd.blogspot.com',                 category: 'official'     },
-        { platform: 'Blog',             url: 'https://themes.imamuddinwpbd.blogspot.com',          category: 'writing'      },
+        { platform: 'Blog',             url: 'https://nextgendigitalhub.blogspot.com',             category: 'writing'      },
         { platform: 'Portfolio',        url: 'https://imamuddinwp.myportfolio.com',                category: 'professional' },
         { platform: 'CV/Resume',        url: 'https://imamuddinwpbd.blogspot.com/cv.pdf',          category: 'professional' }
       ],
