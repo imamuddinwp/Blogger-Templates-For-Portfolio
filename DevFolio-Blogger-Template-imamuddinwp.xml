@@ -23,23 +23,21 @@
     <meta charset='UTF-8'/>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
     <title>DevFolio Blogger Template - imamuddinwp</title>
-    <meta content='The official links, portfolio, experience, and projects for Imam Uddin, imamuddinwp. Connect with Meraz on all platforms.' name='description'/>
+    <meta content='The official links, portfolio, experience, and projects for Imam Uddin, imamuddinwp. Connect with Imamuddinwp on all platforms.' name='description'/>
     <meta content='index, follow' name='robots'/>
     <link href='https://imamuddinwpbd.blogspot.com/' rel='canonical'/>
     <meta content='Imam Uddin - Portfolio Website' property='og:title'/>
     <meta content='Connect with Imam Uddin, imamuddinwp. Explore portfolio, projects, and professional experience.' property='og:description'/>
-    <meta content='https://openmeraz.pages.dev/profile.jpg' property='og:image'/>
+    <meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiSVdKHCryTBA73cbz8eJl8FZNOIPHCVTwhSS05AviGve8s3xmDppow04x9LP7kCgUnaBOdOAihSeqNJVyhbzwIKQco8OTqtpDQyMVSZNZ3hW5KmcUIRoBYSLXJtd0kA8t6jPoky6N5E2lI4H2KiFqGE-f-AWWcEO__BsIcgxF7pW6dpA/s220/seo-expert-in-bd-imam-uddin-imamuddinwp.webp' property='og:image'/>
     <meta content='https://imamuddinwpbd.blogspot.com/' property='og:url'/>
     <meta content='website' property='og:type'/>
     <meta content='summary_large_image' name='twitter:card'/>
     <meta content='Imam Uddin, imamuddinwp - Official Site' name='twitter:title'/>
-    <meta content='Connect with Meraz on all platforms.' name='twitter:description'/>
-    <meta content='https://openmeraz.pages.dev/profile.jpg' name='twitter:image'/>
+    <meta content='Connect with Imamuddinwp on all platforms.' name='twitter:description'/>
+    <meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiSVdKHCryTBA73cbz8eJl8FZNOIPHCVTwhSS05AviGve8s3xmDppow04x9LP7kCgUnaBOdOAihSeqNJVyhbzwIKQco8OTqtpDQyMVSZNZ3hW5KmcUIRoBYSLXJtd0kA8t6jPoky6N5E2lI4H2KiFqGE-f-AWWcEO__BsIcgxF7pW6dpA/s220/seo-expert-in-bd-imam-uddin-imamuddinwp.webp' name='twitter:image'/>
     <script src='https://cdn.tailwindcss.com'/>
-    <script src='https://cdnix.pages.dev/firebase.js'/>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css' rel='stylesheet'/>
     <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap' rel='stylesheet'/>
-    <script src='https://cdnix.pages.dev/devfolio.js'/>
     <script id='schema-data' type='application/ld+json'>
     {
       &quot;@context&quot;: &quot;https://schema.org&quot;,
@@ -72,7 +70,6 @@
         --ui-fg-interactive: #0066ff;
       }
       body {
-        display: none;
         font-family: 'Inter', sans-serif;
         background-color: var(--ui-bg-base);
         color: var(--ui-fg-base);
@@ -141,7 +138,7 @@
         <div class='flex flex-col items-center mb-12'>
             <a href='/'><img alt='Profile of Imam Uddin, imamuddinwp' class='h-24 w-24 rounded-full shadow-lg border-4 border-white' src='https://static.wixstatic.com/media/10490a_a4aa076187214e41a20012e4a0458c16~mv2.jpg/v1/crop/x_0,y_47,w_745,h_745/fill/w_426,h_426,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/imam-uddin-freecodecamp.jpg'/></a>
             <a href='/'><h1 class='text-2xl sm:text-3xl font-bold mt-4 text-center'>Imam Uddin; imamuddinwp</h1></a>
-            <p class='text-[color:var(--ui-fg-muted)] mt-1 text-center'>SEO Expert | Web Designer @ <b> <a href='https://nextgendigitalhub.blogspot.com' target='_blank'>NextGen Digital</a></b>.</p>
+            <p class='text-[color:var(--ui-fg-muted)] mt-1 text-center'>SEO Expert | Web Designer @ <b> <a href='https://nextgendigitalhub.blogspot.com' target='_blank'>NextGen Digital Hub</a></b>.</p>
         </div>
 
         <div id='contentContainer'>
