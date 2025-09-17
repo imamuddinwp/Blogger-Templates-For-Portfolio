@@ -26,7 +26,7 @@ Website       : https://protemplates.org
 <noscript>
   <link href='https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap' rel='stylesheet'/>
 </noscript>
-  
+  <meta content='9aad942df4a6593c5fc2d5ea862ca659' name='p:domain_verify'/>
 <b:if cond='data:view.isLayoutMode'><b:template-skin>
 <![CDATA[
 ]]></b:template-skin></b:if>
@@ -941,6 +941,11 @@ to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}
 /*Your custom CSS is here*/
 /* Disable Copy */ body{user-select:none;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}/* Enable copy on pre and code tags */ pre, code, .cmCn{user-select:text;-moz-user-select:text;-ms-user-select:text;-khtml-user-select:text;-webkit-user-select:text;-webkit-touch-callout:text}
 
+/*Note*/
+.note{position:relative;padding-block:16px;padding-inline:50px 20px;background:#e8f0fe;line-height:1.6em;border-radius:10px;overflow:hidden;}
+.note::before{content:'';width:60px;height:60px;background:rgba(0,0,0,.2);display:block;border-radius:50%;position:absolute;top:-12px;inset-inline-start:-12px;opacity:.1}
+.note::after{content:'\002A';position:absolute;inset-inline-start:18px;top:16px;min-width:15px;text-align:center}
+
 /* Accordion FAQ Schema*/
 .showH { margin: 1.7em 0; font-size: .93rem; line-height: 1.7em;}
 .showH details.ac{margin:5px 2px;border:0;border-radius:0;}
@@ -1091,10 +1096,6 @@ p.comment-footer span:after{content:'\002A';color:#d63031}
 .post-body{width:100%}
 .separator a{display:block}
 .post-body img{height:auto;max-width:100%; margin-top:0; margin-bottom:1rem}
-
-.note{position:relative;padding-block:16px;padding-inline:50px 20px;background:#e8f0fe;line-height:1.6em;border-radius:10px;overflow:hidden;}
-.note::before{content:'';width:60px;height:60px;background:rgba(0,0,0,.2);display:block;border-radius:50%;position:absolute;top:-12px;inset-inline-start:-12px;opacity:.1}
-.note::after{content:'\002A';position:absolute;inset-inline-start:18px;top:16px;min-width:15px;text-align:center}
 
 /* ]]> */</style>
 </b:if>
@@ -1952,7 +1953,7 @@ window.addEventListener("load",function(){var e=!1;$(document).on("scroll",funct
 		    <header class='header box'>
 			    <div class='header__left'>
 				    <div class='header__photo'>
-					    <a href='/'><img alt='Imamuddinwp SEO Expert Shopify Expert' class='header__photo-img' fetchpriority='high' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNsZuQ1bZfjFtbyiGJIc37HSKLekGL4_jFxOI8z7Xt0eX6lrNZxVhNU_DJ-mFQCAZwuk6MIpZ6O0E_0cB_U5p7mg4L9O6LWDX3N738fUSpJ2yAxX5RPcYKWpMkO9Pi_8h3QDUD61DIyi-wdctM2PQianLPX_zd39e54xjRkzsZpO2Sq_ysEMfblIEsBRM/s1600-rw/imamuddinwp.webp' title='imamuddinwp'/></a>
+					    <a href='/'><img alt='Imamuddinwp SEO Expert Shopify Expert' class='header__photo-img' fetchpriority='high' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmDSVEJlr48tTXtl5IHtgytEpZy9QVLwo1mYhHTr2eYqt6EHJG6RbhTmYmSamSHvopH8PMbV2k6wd7XYb9ll95BMUFokZbjN5zaEiKMHkb8ahGDXxFKzLhr9yirugsesJWgeGKR-IN6iZU7-lm4JmH2GGVJhw1C5W91icWWV0c5-T40jfKfm0kx9T7VNQ/s1600-rw/imamuddinwp-seo-expert-web-designer.webp' title='imamuddinwp'/></a>
 					</div>
 					<div class='header__base-info'>
                       <h2 class='title title--h2'><a href='/'>Imam Uddin</a></h2>
@@ -2000,7 +2001,7 @@ window.addEventListener("load",function(){var e=!1;$(document).on("scroll",funct
 <div class='pb-0 pb-sm-2'>
   <h1 class='title title--h1 first-title title__separate'>Imamuddinwp - [SEO Expert | Web Designer]</h1>
   <p>Welcome to my digital space! I&#8217;m <b><a href='/' target='_blank'>Imam Uddin</a></b>, a highly passionate <b>SEO Expert</b> &amp; <b>Creative Web Designer</b>. I blend creativity and data-driven strategy to build websites that not only look stunning, but also climb search-engine rankings and convert visitors into customers.</p>
-  <blockquote>My journey in SEO and Web Design began over 12 years ago, fueled by curiosity and a love for technology.</blockquote>
+  <blockquote class='note'>My journey in <b>SEO</b> and <b>Web Design</b> began over <b><i>12 years ago</i></b>, fueled by curiosity and a love for technology.</blockquote> 
     <h2 class='title title--h2 first-title title__separate'>Who Am I? - [Imam Uddin - imamuddinwp]</h2>
   
   <p>You may already know me as <b><a href='https://www.bing.com/search?q=imamuddinwp' target='_blank'>@imamuddinwp</a></b> &#8212; that&#8217;s the name I&#8217;m known by across the web. Just type <b><a href='/p/about-me.html' target='_blank'>imamuddinwp</a></b> on any popular search engine, and you&#8217;ll discover my digital footprints, contributions, and active involvement in the online world of SEO, Web Development, and Digital Marketing.</p>
@@ -2969,9 +2970,11 @@ window.addEventListener("load",function(){var e=!1;$(document).on("scroll",funct
       box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
     }
 
-    .post-body a.b-tooltip-container:hover .b-tooltip {
-      visibility: visible;
-      opacity: 1;
+    @media (hover: hover) {
+      .post-body a.b-tooltip-container:hover .b-tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
     }
   </style>
   <!-- LINT.ThenChange(//depot/google3/java/com/google/blogger/b2/layouts/widgets/v2-style.css) -->
